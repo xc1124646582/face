@@ -1,0 +1,73 @@
+{
+    "env": {
+        "browser": false,
+        "commonjs": false,
+        "es6": false,
+        "node": false,
+        "amd": false
+    },
+    "extends": ["airbnb-base/legacy", "eslint:recommended"],
+    "installedESLint": true,
+    "parser": "babel-eslint",
+    "globals": {
+        "$": true,
+        "_data": true,
+        "console":true,
+        "document":true,
+        "fetch":true,
+        "alert":true,
+        "require":true,
+        "module":true,
+        "window":true,
+        "Promise":true,
+        "XMLHttpRequest":true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true,
+            "templateStrings": true,
+            "superInFunctions": true,
+            "spread": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true,
+        "templateStrings": true,
+        "superInFunctions": true,
+        "spread": true
+
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["warn", "single"],
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "prefer-template": "off",
+        "consistent-return": "off",
+        "no-param-reassign": "off",
+        "comma-dangle": ["error", "never"],
+        "padded-blocks": ["error", {
+            "switches": "always",
+            "classes": "never",
+            "blocks": "always"
+        }],
+        "no-underscore-dangle": ["error", {
+            "allow": ["_data", "_result"],
+            "allowAfterThis": true
+        }],
+        "quote-props": ["error", "consistent"],
+        "jsx-quotes": ["error", "prefer-single"],
+        "react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
+        "no-debugger": 2
+
+    }
+}

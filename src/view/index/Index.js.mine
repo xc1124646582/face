@@ -1,0 +1,177 @@
+/*
+* @Author: huanghongqiang
+* @Date:   2017-07-14 16:13:10
+* @Last Modified by:   huanghongqiang
+* @Last Modified time: 2017-07-28 11:48:09
+* @Email: st8817@163.com
+* @File Path: /Users/huanghongqiang/work/dsj/Face/trunk/zyweb/src/view/index/Index.js
+* @File Name: Index.js
+* @Descript:
+*/
+
+'use strict';
+import React, { Component } from 'react';
+import {FUserCard} from '../../component/';
+import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import {logout} from '../../action';
+import RouterUtils from '../../util/RouterUtils';
+import './Index.css';
+const { Header, Content, Footer, Sider } = Layout;
+const SubMenu = Menu.SubMenu;
+
+
+
+
+class Index extends Component{
+    state = {
+        collapsed: false,
+        first: '',
+        secend: ''
+    };
+    onCollapse = (collapsed) => {
+
+        console.log(collapsed);
+        this.setState({ collapsed });
+  
+    }
+
+    checkRouter = (item, key, keyPath) => {
+
+        RouterUtils.go(item.key);
+  
+    }
+
+
+    getMenus(){
+
+        const menus = [
+
+            {'id':'x1','name':'人脸查询','action':'face','pos':1,'collapsed':true,'children':[
+          {'id':'x1','name':'人脸查询','action':'query','pos':1,'collapsed':true},
+          {'id':'x1','name':'实时监控','action':'control','pos':1,'collapsed':true}
+            ]},
+            {'id':'x2','name':'系统管理','action':'system','pos':2,'collapsed':true,'children':[
+        {'id':'x1','name':'单位管理','action':'ou','pos':1,'collapsed':true},
+        {'id':'x1','name':'部门管理 ','action':'department','pos':2,'collapsed':true},
+        {'id':'x1','name':'资源管理','action':'asset','pos':3,'collapsed':true},
+        {'id':'x1','name':'权限管理','action':'privilege','pos':4,'collapsed':true},
+        {'id':'x1','name':'角色管理','action':'role','pos':5,'collapsed':true},
+        {'id':'x1','name':'用户组管理 ','action':'usergroup','pos':6,'collapsed':true},
+        {'id':'x1','name':'用户管理','action':'user','pos':7,'collapsed':true}
+            ]},
+            {'id':'x3','name':'设备管理','action':'device','pos':3,'collapsed':true,'children':[
+         {'id':'x1','name':'相机区域管理','action':'areaCamera','pos':1,'collapsed':true},
+         {'id':'x1','name':'相机设备管理 ','action':'deviceCamera','pos':2,'collapsed':true},
+         {'id':'x1','name':'服务器管理','action':'server','pos':3,'collapsed':true}
+            ]},
+            {'id':'x4','name':'人脸底库管理','action':'facedb','pos':4,'collapsed':true,'children':[
+
+          {'id':'x1','name':'人脸库管理','action':'faceb','pos':1,'collapsed':true},
+          {'id':'x1','name':'底库照片管理 ','action':'photodb','pos':2,'collapsed':true}
+
+            ]},
+            {'id':'x5','name':'布控管理','action':'deploy','pos':5,'collapsed':true,'children':[
+          {'id':'x1','name':'布控设置','action':'setup','pos':1,'collapsed':true},
+          {'id':'x1','name':'处警人','action':'police','pos':2,'collapsed':true},
+          {'id':'x1','name':'布控报警查询','action':'warning','pos':3,'collapsed':true}
+            ]},
+        {'id':'x6','name':'报表管理 ','action':'report','pos':6,'collapsed':true,'children':[]},
+        {'id':'x7','name':'日志管理 ','action':'log','pos':7,'collapsed':true,'children':[]}
+        
+        ];
+        const items = [];
+        for(let i of menus){
+
+            const children = i.children;
+            if(children.length > 0){
+
+                const sub = this.getSubMenus(i.action,children);
+                items.push(<SubMenu key={i.action}  title={<span>{i.name}</span>} >{sub}</SubMenu>);
+        
+            }else{
+
+                items.push(<Menu.Item  key={i.action}  ><span>{i.name}</span></Menu.Item>);
+        
+            }
+        
+        }
+
+        return <Menu theme='dark' defaultSelectedKeys={['1']} mode='inline' onClick={this.checkRouter}>{items}</Menu>;
+
+      
+    }
+
+    getSubMenus(parentKey,children){
+
+        const items = [];
+        for(let i of children){
+
+            items.push(<Menu.Item  key={parentKey+'/'+i.action}  ><span>{i.name}</span></Menu.Item>);
+      
+        }
+        return items;
+    
+    }
+
+    //退出登陆
+    handleLogout=() => {
+
+        console.log('aaaaaa');
+        this.props.logout();
+    
+    }
+
+
+    render(){
+
+        return(
+        <Layout style={{height:'100%',overflow:'visible',width:'100%'}}>
+          <Sider 
+            collapsible
+            collapsed={this.state.collapsed}
+            onCollapse={this.onCollapse}
+            style={{height:'100%'}}
+          >
+            <div className='logo' style={{height:90}} >
+              <FUserCard />
+            </div>
+            {this.getMenus()}
+          </Sider>
+        <Layout style={{overflow:'visible',minWidth:'860px'}}>
+          <Header style={{ background: '#fff', padding: 0,height:'70px', textAlign: 'right',paddingRight:50 }} >
+            <Icon type='user' />&nbsp;<span>肖佳男</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span onClick={this.handleLogout}><Icon type='poweroff' />&nbsp;<span>退出</span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </Header>
+          <Content style={{ 'margin': '20px 20px 0px 20px','background': '#fff' }}>
+            
+            <Breadcrumb style={{'marginRight': 30,'marginLeft': 30, 'background': '#fff','height':'74px','borderBottom': 'solid 1px rgb(74,163,148)','lineHeight':'74px'}}>
+              <Breadcrumb.Item style={{ 'fontsize': 20}}>{this.first}</Breadcrumb.Item>
+              <Breadcrumb.Item>{this.secend}</Breadcrumb.Item>
+            </Breadcrumb>
+            <div style={{ paddingLeft: 30,paddingRight:30, background: '#fff', minHeight: 536 }}>
+              {this.props.children}
+            </div>
+          </Content>
+          <Footer style={{ margin:'0px 20px',textAlign: 'center',height:'70px',background: '#fff' }}>
+            2017 ©兆原数通(北京)数据科技有限公司
+          </Footer>
+        </Layout>
+        <div class='clears'></div>
+      </Layout>
+        );
+    
+    }
+}
+const dispatch2props =(dispatch) => {
+
+    // 获取方法
+    return bindActionCreators({logout}, dispatch);
+
+};
+
+
+
+export default connect (null,dispatch2props)(Index);
+

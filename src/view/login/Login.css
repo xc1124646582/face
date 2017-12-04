@@ -1,0 +1,225 @@
+/*登录页*/
+.Login{
+	position: absolute;
+	height:100%;
+	width: 100%;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background: url(/public/images/login-bg-img.png) no-repeat; 
+	background-size: 100% 100%; 
+}
+ .Login .login-body-center {	
+    height: 28rem;
+    width: 67rem;
+	position: absolute;
+	background-color:rgba(151,220,186,0.1);
+	}
+
+/*星星闪烁*/
+ .Login .stars{
+	/*position: absolute;*/
+ }
+ .Login  .stars img{
+ 	position: absolute;
+ 	width: 15rem;
+
+
+ }
+ .Login  .stars img:nth-child(1){
+    top: 17rem;
+    right: 4rem;
+     animation: starFlick 5s ease-out infinite; 
+     -webkit-animation: starFlick 5s ease-out infinite;
+        animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+ }
+
+  .Login  .stars img:nth-child(2){
+    left: 26rem;
+    bottom: 2rem;
+     animation: starFlick 5s ease-out infinite; 
+     -webkit-animation: starFlick 5s ease-out infinite;
+     animation-delay:1s;
+	-webkit-animation-delay:1s; /* Safari 和 Chrome */
+ }
+  .Login  .stars img:nth-child(3){
+       top: 4rem;
+    left: 52rem;
+     animation: starFlick 5s ease-out infinite; 
+     -webkit-animation: starFlick 5s ease-out infinite;
+        animation-delay:2s;
+	-webkit-animation-delay:2s; /* Safari 和 Chrome */
+ }
+  .Login  .stars img:nth-child(4){
+        top: 3rem;
+    left: 8rem;
+     animation: starFlick 5s ease-out infinite; 
+     -webkit-animation: starFlick 5s ease-out infinite;
+        animation-delay:3s;
+	-webkit-animation-delay:3s; /* Safari 和 Chrome */
+ }
+  .Login  .stars img:nth-child(5){
+     bottom: 18rem;
+    left: 12rem;
+     animation: starFlick 5s ease-out infinite; 
+     -webkit-animation: starFlick 5s ease-out infinite;
+        animation-delay:4s;
+	-webkit-animation-delay:4s; /* Safari 和 Chrome */
+ }
+  .Login  .stars img:nth-child(6){
+      bottom: 1rem;
+    right: 24rem;
+     animation: starFlick 5s ease-out infinite; 
+     -webkit-animation: starFlick 5s ease-out infinite;
+        animation-delay:5s;
+	-webkit-animation-delay:5s; /* Safari 和 Chrome */
+ }
+ @-webkit-keyframes starFlick{
+    0% {  
+         opacity: 0.8;  
+    }  
+    50% {  
+         opacity: 0.3;   
+    }  
+    100% {  
+          opacity: 0.8;   
+    }   
+}
+
+  .Login  .login-body-center .go-pro{
+
+       margin: 3rem  0 0 9rem;
+       position: relative;
+ }
+   .Login  .login-body-center .go-pro img{
+    position: absolute;
+  }
+ 
+.Login  .login-body-center .go-pro img:nth-child(1){
+      width: 23rem;
+}
+
+.Login  .login-body-center .go-pro img:nth-child(2){
+      width: 14rem;
+      top: 3.9rem;
+   left: 4.5rem;
+    -webkit-animation:ringcircle 5s infinite linear;/*匀变速*/
+}
+@-webkit-keyframes ringcircle{
+0%{ transform:rotate(0deg); }
+25%{ transform:rotate(90deg); }
+50%{ transform:rotate(-45deg); }
+75%{ transform:rotate(180deg); }
+100%{ transform:rotate(360deg); }
+}
+ .Login  .login-body-center .go-pro img:nth-child(3){
+  width: 17rem;
+       top: 2.4rem;
+    left: 3rem;
+    -webkit-animation:linearcircle 5s infinite linear;/*匀速 循环*/
+}
+@-webkit-keyframes linearcircle{
+0%{ transform:rotate(0deg); }
+/*50%{ transform:rotate(180deg);}
+75%{ transform:rotate(270deg); }*/
+100%{ transform:rotate(360deg); }
+}
+ .Login  .login-body-center .go-pro img:nth-child(4){
+    width: 12rem;
+
+        top: 4.9rem;
+    left: 5.5rem;
+    -webkit-animation:littlecircle 5s infinite linear;/*匀变速*/
+}
+@-webkit-keyframes littlecircle{
+0%{ transform:rotate(0deg); }
+25%{ transform:rotate(-90deg); }
+50%{ transform:rotate(45deg); }
+75%{ transform:rotate(-180deg); }
+100%{ transform:rotate(-360deg); }
+}
+
+
+ .Login  .login-body-center h1{
+	color: #fff;
+	position: absolute;
+	top: -4rem;
+	font-size: 2.5rem;
+}
+ .Login  .login-body-center-login p{
+	color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+ .Login  .login-body-center-login{
+      width: 22rem;
+    height: 31rem;
+    position: absolute;
+       right: 2rem;
+    top: -1rem;
+    background-color: rgba(73,193,232,0.2);
+}
+/*.login-form {
+  max-width: 300px;
+}*/
+ .Login  .login-form-forgot {
+  float: right;
+}
+ .Login  .login-form-button {
+  width: 100%;
+}
+ .Login  .ant-form-item-control-wrapper{
+	text-align: center;
+}
+ .Login  .ant-input-affix-wrapper{
+	width: 80% !important;
+}
+ .Login  .login-form input{
+	background:#3b9aac;
+	border:none;
+	    box-shadow: 0px 0px 6px #fff;
+	    color: #fff;
+	      height: 2.5rem;
+}
+ .Login  .login-form input::-webkit-input-placeholder{
+    color: #fff;
+}
+ .Login  .login-form input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff; 
+}
+
+ .Login  .login-form input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+
+ .Login  .login-form input:-ms-input-placeholder{
+    color: #fff;
+}
+ .Login  .ant-btn{
+    width: 80% !important;
+}
+ .Login  .anticon-user:before{
+	color: #fff;
+}
+ .Login  .anticon-lock:before{
+	color: #fff;
+}
+
+ .Login  .ant-btn-primary{
+	background:#44b7d0 !important;
+	border:none !important;
+	    box-shadow: 0px 0px 6px #fff;
+	 height: 2.5rem !important;
+	     margin-top: 4rem;
+}
+
+ .Login  .login-foot{
+	position: absolute;
+	bottom: 4.5rem;
+	color: #999999;
+}
+

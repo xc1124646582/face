@@ -1,0 +1,107 @@
+/*
+* @Author: huanghongqiang
+* @Date:   2017-07-28 11:46:47
+* @Last Modified by:   huanghongqiang
+* @Last Modified time: 2017-07-28 13:15:34
+* @Email: st8817@163.com
+* @File Path: /Users/huanghongqiang/work/dsj/Face/trunk/zyweb/src/view/index/Index.css
+* @File Name: Index.css
+* @Descript:
+*/
+/**
+*  边菜单背景颜色
+*/
+.container .ant-layout-sider{
+    background-color: rgb(84,93,107) ;
+}
+
+/**
+*   菜单默认颜色
+*/
+.container .ant-menu{
+
+    background-color: rgb(84,93,107) ;
+
+    
+}
+
+.container .ant-menu-dark .ant-menu-item{
+    color:#fff;
+    font-size: 16px;
+    height: 52px;
+}
+body,html{
+    scroll:none;
+}
+.ant-layout{
+    overflow-y: hidden;
+}
+.container .ant-menu-vertical .ant-menu-item, 
+.container .ant-menu-inline .ant-menu-item, 
+.container .ant-menu-vertical .ant-menu-submenu-title,
+.container .ant-menu-inline .ant-menu-submenu-title{
+    color:#fff;
+    font-size: 16px;
+}
+.container .ant-menu-dark, .container .ant-menu-dark .ant-menu-sub{
+    color:#fff;
+    font-size: 16px;
+}
+
+
+/**
+*   菜单底部收缩默认颜色
+*/
+.container .ant-layout-sider-trigger{
+
+    background-color: rgb(84,93,107) ;
+}
+
+/**
+*   菜单选中样式
+*/
+.container .ant-menu-item-selected{
+    background-color:rgb(227,237,244);
+}
+
+/**
+*   菜单选中样式
+*/
+.container .ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background-color:rgb(227,237,244);
+     color:rgb(125,133,143);
+}
+/**
+    子菜单展开样式 
+*/
+.container .ant-menu-sub > .ant-menu-item {
+    font-size: 13px;
+    color:rgb(125,133,143);
+    background-color: rgb(207,219,227);
+}
+
+/**
+    菜单选中样式 
+*/
+.container .ant-menu-item-active{
+    color:rgb(125,133,143);
+    background-color:rgb(227,237,244);
+}
+
+/**
+    菜单鼠标悬停样式
+*/
+.container .ant-menu-dark .ant-menu-item:hover, 
+.container .ant-menu-dark .ant-menu-item-active, 
+.container .ant-menu-dark .ant-menu-submenu-active,
+.container .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open, 
+.container .ant-menu-dark .ant-menu-submenu-selected, 
+.container .ant-menu-dark .ant-menu-submenu:hover, 
+.container .ant-menu-dark .ant-menu-submenu-title:hover {
+    background-color: #aeaeae;
+    color: #fff;
+}
+/*处理按钮*/
+.ant-table-middle .ant-table-thead > tr > th:not(.ant-table-selection-column), .ant-table-middle .ant-table-tbody > tr > td {
+    padding: 10px 0px;
+}

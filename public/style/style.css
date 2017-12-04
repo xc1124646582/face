@@ -1,0 +1,229 @@
+ /*背景图*/
+ .ant-modal-content{
+ 	background: url(/public/images/modal-form.png) no-repeat;
+ 	    background-size: 100% 100%;
+ 	    width: 450px;
+ }
+/*新增 标题*/
+.ant-modal-content .ant-modal-header{
+	text-align: center;
+	padding-top: 58px;
+	padding-bottom: 15px;
+}
+.ant-modal-content .ant-modal-header .ant-modal-title{
+	font-size: 20px;
+	color: #7a89a1;
+	font-weight: bold;
+}
+/*confirm*/
+.ant-confirm-body-wrapper .ant-confirm-btns .ant-btn-primary{
+	 background-color: rgb(3,166,147);
+    border-color:rgb(3,166,147);
+
+}
+
+/*form*/
+.modalForm{
+	margin: 15px 0 25px 0;
+}
+.modalForm .ant-row-flex{margin:0 20px;}
+.modalForm .color-red{color: red;}
+.modalForm i{
+}
+.modalForm .Cue{
+	visibility: hidden;
+	color: red;
+	margin-left: 155px;
+}
+.modalForm button{
+    background-color: rgb(3,166,147);
+    border-color:rgb(3,166,147);
+}
+.modalForm button:hover{
+    background-color: rgb(3,138,122);
+    border-color:rgb(3,138,122);
+}
+.modalForm button:active{
+    background-color: rgb(3,138,122);
+    border-color:rgb(3,138,122);
+}
+.modalForm button:focus{
+    background-color: rgb(3,138,122);
+    border-color:rgb(3,138,122);
+}
+.modalForm .btn{
+	margin-top:20px;
+}
+.modalForm .tc_align{
+	text-align: center;
+}
+
+/*label*/
+.modalForm label{
+	font-size: 16px;
+	color: #353c47;
+}
+.modalForm input,select{
+	height: 40px;
+}
+/*下拉框*/
+.modalForm .ant-select-selection--single{
+	height: 40px;
+	
+}
+.modalForm .ant-select-selection__rendered{
+	line-height: 40px;
+}  
+/*按钮*/
+.modalForm button{
+ }
+ .modalForm button span{
+ 	 padding:0 2rem;
+ }
+ /*form button*/
+ .modalForm button:last-child{
+	margin-left: 2.8rem;
+	
+
+ }
+ /*upload-img*/
+.modalForm .uploadImg button{
+	margin-left:0;
+	color: #fff;
+	background: #3ea89c;
+	border: none;
+}
+
+
+
+
+
+.setforms>div{text-align: center;
+	color: rgba(0, 0, 0, 0.85);
+	line-height: 32px;
+	box-sizing:border-box;
+padding-right: 10%;
+	margin:18px 0;
+    font-size: 16px;}
+.setforms>div:nth-last-child(1){
+	padding-left:16%;
+}
+.setforms>div input,select{ width: 273px;
+height: 40px;
+    padding: 6px 7px;
+        font-size: 12px;
+        border:1px solid #ccc;
+            border-radius: 4px;
+     }
+.setforms>div>span{height: 30px}
+.setforms>div>button{
+	    padding: 0 15px;
+	    width: 117px;
+    font-size: 14px;
+        border-radius: 4px;
+    height: 32px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    margin:0 14px 0 40px;
+    text-align: center;
+        background-color: rgb(3,166,147);
+    border-color: rgb(3,166,147);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}
+.setforms>div>button:hover{
+	background-color: rgb(3,138,122);
+    border-color: rgb(3,138,122);
+}
+
+
+
+.setupus{color:black;
+font-size: 16px}
+.titles{margin-left: 23px}
+.ant-select-selection--multiple:after{
+	height: 50px
+}
+
+
+
+.formsa{font-size: 16px;
+margin-bottom: 5px}
+.formsa span{color:red;font-size: 12px}
+.formsa input{width: 273px;
+height: 30px;
+    padding: 6px 7px;
+        font-size: 12px;
+        border:1px solid #ccc;
+            border-radius: 4px;}
+.formboxs{ box-sizing: border-box;
+            padding-left: 9px }
+.formsa>button{
+	    padding: 0 15px;
+	    width: 117px;
+    font-size: 14px;
+        border-radius: 4px;
+    height: 32px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    margin:13px 10px 0 50px;
+    text-align: center;
+        background-color: rgb(3,166,147);
+    border-color: rgb(3,166,147);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);}
+.formsa>button:hover{
+	background-color: rgb(3,138,122);
+    border-color: rgb(3,138,122);
+}
+.selectboxs{font-size: 16px;}
+.formsa span{font-size: 12px}
+.selectboxs .formspan{
+	color: red;
+	font-size: 12px;
+	margin-left: 73px;
+}
+.formsa .formspan{color: red;
+	font-size: 12px;
+	margin-left: 73px;
+}
+.inputimg span{ color: black }
+.inputtime input{ width: 102px }
+
+.videoimg>div{
+    opacity: 0;
+    transition: 0.4s;
+}
+.videoimg:hover>div{
+    opacity: 0.25;
+    
+}
+.videoimg .videoimg2{
+    transition: 0.5s;
+    z-index: 9;
+    opacity: 0;
+    transform: scale(1.5);
+}
+.videoimg:hover>.videoimg2{
+    opacity: 1;
+    transform: scale(1);
+}
+.formP{width: 90px;
+    text-align: right;
+display: inline-block;}
+.checkform{text-align: center;}
+
+.selectboxs select{
+    height: 20px;
+}
+.selectboxs select option{height: 30px}
+.clear{clear: both;}
+.container .ant-spin-container .ant-pagination{margin-top: 35px;
+margin-right: 35px}
+
+/*搜索框*/
+.searchkey{border:1px solid #ccc;
+    height:26px;
+    font-size: 12px;
+    padding-left:4px}

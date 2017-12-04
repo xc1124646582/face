@@ -1,0 +1,280 @@
+/* CSS Document */
+
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+input, textarea {
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+}
+html {
+    color: #53585f;
+    font-size: 12px;
+}
+html, input, textarea {
+    color: #53585f;
+}
+body {
+
+}
+body, td, th {
+    font-size: 12px;
+}
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, table, iframe, p, img {
+    padding: 0;
+    margin: 0;
+}
+article, section, hgroup, header, footer, nav {
+    display: block;
+}
+div, p {
+    display: block;
+}
+img {
+    border: none;
+}
+ul, ol, dl {
+    list-style: none;
+}
+fieldset, img {
+    border: 0;
+}
+button {
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+address, caption, cite, code, dfn, em, th, var, optgroup {
+    font-style: normal;
+    font-weight: normal;
+}
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+a {
+    color: #ed4441;
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited, a:hover {
+    cursor: pointer;
+}
+a:active, a:focus {
+    outline: 0;
+   
+
+}
+input, button, textarea {
+    border: none;
+    outline: none;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    outline: 0 none;
+}
+input::-ms-clear {
+    display: none;
+}
+input::-ms-reveal {
+    display: none;
+}
+
+h2, h3, h4, h5 {
+    font-weight: normal;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 16px;
+}
+h3 {
+    font-size: 16px;
+}
+h4 {
+    font-size: 14px;
+}
+h5 {
+    font-size: 13px;
+}
+.mains{ width:100%;
+height:100%; }
+.container {
+       width:100%;
+       height: 100%;
+       min-height: 100%;
+       min-width: 1024px;
+       margin: 0 auto;
+}
+/**
+    表头头颜色
+*/
+.container .ant-table-thead th{
+    background-color: rgb(216,233,231);
+    color:rgba(53,60,71,0.85);
+    font-size:13px;
+    text-align: center;
+}
+
+/**
+    默认按钮颜色
+*/
+.container .ant-btn-primary {
+    background: rgb(3,166,147);
+    border-color:rgb(3,166,147);
+    
+}
+
+
+.container .ant-popover .ant-popover-placement-top .ant-btn .ant-btn-primary{
+    background-color: rgb(3,166,147);
+    border-color:rgb(3,166,147);
+}
+
+.container .ant-btn .ant-btn-primary .ant-btn-sm {
+    background-color: rgb(3,166,147);
+    border-color:rgb(3,166,147);
+}
+/**
+    默认按钮选中状态
+*/
+.container .ant-btn-clicked{
+    background-color: rgb(3,138,122);
+    border-color:rgb(3,138,122);
+}
+
+/**
+    默认按钮选中状态
+*/
+.container .ant-btn-primary:hover{
+    background-color: rgb(3,138,122);
+    border-color:rgb(3,138,122);
+}
+/**
+    默认按钮选中状态
+*/
+.container .ant-btn-primary:focus{
+    background-color: rgb(3,138,122);
+    border-color:rgb(3,138,122);
+}
+
+/**
+*   输入框激活颜色
+*/
+.container .ant-input:hover{
+    border-color:rgb(108,120,136);
+}
+.container .ant-input:focus{
+    border-color:rgb(108,120,136);
+}
+
+/*
+*   复选框鼠标悬停
+*/
+.container .ant-checkbox:hover{
+   border-color:rgb(3,166,147); 
+    /*border-radius: 3px*/
+}
+.container .ant-checkbox:focus{
+    /*border:solid 1px rgb(3,166,147); 
+    border-radius: 3px*/
+}
+
+
+.container .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: rgb(3,166,147) ;
+    border-color: rgb(3,166,147); 
+    color: rgb(3,166,147);
+}
+
+
+.container .ant-checkbox-indeterminate .ant-checkbox-inner {
+    background-color: rgb(3,166,147) ;
+    border-color: rgb(3,166,147); 
+    color: rgb(3,166,147);
+}
+
+/**
+*   表单行
+*/
+.container .ant-table-row{
+    color:rgba(99,107,119,0.85);
+    text-align: center;
+}
+
+/**
+    popconfirm按钮选中状态
+*/
+.ant-popover-buttons .ant-btn:hover, .ant-btn:focus {
+    color:  rgb(3,166,147);
+      background-color:#fff ;
+   border-color: rgb(3,166,147); 
+}
+.ant-popover-buttons .ant-btn-primary{
+        background-color: rgb(3,166,147) ;
+    border-color: rgb(3,166,147); 
+    color: #fff;
+
+}
+.ant-popover-buttons .ant-btn-primary:hover, .ant-btn-primary:focus {
+   background-color: rgb(3,138,122); 
+    border-color: rgb(3,138,122);
+    color: #fff;
+}
+
+/*操作行*/
+.container .operation{
+    margin:10px 0;
+}
+/*分页*/
+.container .ant-pagination{
+    text-align: center;
+    margin-top:150px;
+
+
+}
+.container .ant-pagination .ant-pagination-item-active{
+      background-color: rgb(3,166,147) ;
+      border-color: rgb(3,166,147); 
+}
+.container .ant-row-flex{
+        display: inline-block;
+    } 
+.container .ant-row-flex .gutter-row{
+    text-align: left;
+     display: block;
+     margin-bottom: 8px;
+     
+}
+.gutter-row-tops{
+    margin-bottom: 5px;
+}
+.ant-table-middle .ant-table-thead > tr > th:not(.ant-table-selection-column), .ant-table-middle .ant-table-tbody > tr > td {
+    padding: 10px 0px;
+
+}
+.ant-layout{ background: red}
+.deviceCamera-btns{ margin-top: 6px }
+.clears{clear: both;}
+.video_main video{position: absolute;
+    display: block;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+margin: auto;}
